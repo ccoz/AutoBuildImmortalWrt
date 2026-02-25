@@ -1,7 +1,7 @@
 #!/bin/bash
 # Log file for debugging
 OFFICIAL="https://downloads.immortalwrt.org"
-MIRROR="https://mirrors.cernet.edu.cn/immortalwrt"
+MIRROR="https://mirrors.sjtug.sjtu.edu.cn/immortalwrt"
 echo ">>> official failed, switching to mirror"
 BASE_URL="$MIRROR"
 echo "Using BASE_URL = $BASE_URL"
