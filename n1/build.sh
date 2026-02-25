@@ -1,5 +1,16 @@
 #!/bin/bash
 # Log file for debugging
+OFFICIAL="https://downloads.immortalwrt.org"
+MIRROR="https://mirrors.cernet.edu.cn/immortalwrt"
+echo ">>> official failed, switching to mirror"
+BASE_URL="$MIRROR"
+echo "Using BASE_URL = $BASE_URL"
+echo "========================================"
+echo "Updating repositories.conf"
+echo "========================================"
+sed -i "s#${OFFICIAL}#${BASE_URL}#g" repositories.conf
+cat repositories.conf
+
 source shell/custom-packages.sh
 echo "第三方软件包: $CUSTOM_PACKAGES"
 LOGFILE="/tmp/uci-defaults-log.txt"
